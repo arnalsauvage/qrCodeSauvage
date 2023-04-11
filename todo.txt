@@ -2,5 +2,8 @@
 
 # Todo
 
-- bug : l'image est téléchargée deux fois !
+
+# Changelog
+- 2023-04-11 - 1pt - bug : l'image est téléchargée deux fois !
+- 2023-04-11 - 1pt - refactoring : dossiers js et css pour les js et css
 

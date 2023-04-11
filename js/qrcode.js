@@ -4,7 +4,7 @@ boutonTelechargerImageQrCode.addEventListener("click", function(){
     const image = document.querySelector("img");
     boutonTelechargerImageQrCode.href = image.src;
     boutonTelechargerImageQrCode.download = "monQrCode.png";
-    boutonTelechargerImageQrCode.click();
+  //  boutonTelechargerImageQrCode.click();
 });
 
 function makeCode () {
