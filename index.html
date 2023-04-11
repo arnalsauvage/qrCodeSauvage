@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="qr.code.min.js"></script>
+    <title> QrCode Sauvage </title>
+</head>
+<body>
+<header>
+    <h1>QrCode Sauvage</h1>
+
+        <p>Créer un QrCode en quelques clics !</p>
+
+
+</header>
+<main>
+    <label for="text">Texte à encoder :</label>
+    <input id="text" type="text" value="" oninput="modifTexteAencoder();"/><br/>
+    <div id="qrcode"></div>
+    <div id="bouton">
+        <button onclick="makeCode();" id="boutonQrcode">Créer le code !</button>
+        <a class="lienBouton" download="monQrCode.png" href="" id="downloadLink">Télécharger le Diagramme</a>
+    </div>
+</main>
+<script src="qrcode.js"></script>
+<script type="text/javascript">
+    qrCode = new QRCode(document.getElementById("qrcode"), "");
+</script>
+</body>
+</html>
