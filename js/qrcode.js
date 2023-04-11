@@ -7,6 +7,17 @@ boutonTelechargerImageQrCode.addEventListener("click", function(){
   //  boutonTelechargerImageQrCode.click();
 });
 
+function rendLeBoutonSombre(idBouton) {
+    let bouton = document.getElementById(idBouton);
+    bouton.style.backgroundColor = "#050505";
+    bouton.style.color = "#505050";
+}
+
+function remetBoutonNormal(idBouton) {
+    let bouton = document.getElementById(idBouton);
+    bouton.removeAttribute("style");
+}
+
 function makeCode () {
     let elText = document.getElementById("text");
 
@@ -16,12 +27,10 @@ function makeCode () {
         return;
     }
     qrCode.makeCode(elText.value);
-    let bouton = document.getElementById("boutonQrcode");
-    bouton.style.backgroundColor = "#050505";
-    bouton.style.color = "#505050";
+    rendLeBoutonSombre("boutonQrcode");
 }
 
 function modifTexteAencoder(){
-    let bouton = document.getElementById("boutonQrcode");
-    bouton.removeAttribute("style");
+    remetBoutonNormal("boutonQrcode");
+    remetBoutonNormal("btnUrlTest");
 }

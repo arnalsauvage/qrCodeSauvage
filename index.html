@@ -17,16 +17,21 @@
 </header>
 <main>
     <label for="text">Texte à encoder :</label>
-    <input id="text" type="text" value="" oninput="modifTexteAencoder();"/><br/>
+    <input id="text" type="text" value="" placeholder="votre adresse ex: http://top5.re" oninput="modifTexteAencoder();"/><br/>
+
+
+    <button id="btnUrlTest" onclick="window.open(document.getElementById('text').value, '_blank');">Tester l'adresse</button>
     <div id="qrcode"></div>
     <div id="bouton">
         <button onclick="makeCode();" id="boutonQrcode">Créer le code !</button>
-        <a class="lienBouton" download="monQrCode.png" href="" id="downloadLink">Télécharger le Diagramme</a>
+        <a class="lienBouton" download="monQrCode.png" href="" id="downloadLink">Télécharger le QrCode</a>
     </div>
 </main>
 <script src="js/qrcode.js"></script>
 <script type="text/javascript">
     qrCode = new QRCode(document.getElementById("qrcode"), "");
+    rendLeBoutonSombre("boutonQrcode");
+    rendLeBoutonSombre("btnUrlTest");
 </script>
 </body>
 </html>
