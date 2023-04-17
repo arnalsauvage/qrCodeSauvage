@@ -9,18 +9,17 @@
 </head>
 <body>
 <header>
-    <h1>QrCode Sauvage</h1>
-
-        <p>Créer un QrCode en quelques clics !</p>
-
+    <h1>QrCode Fastoche</h1>
+    <p>Créer un QrCode en quelques clics !</p>
 
 </header>
 <main>
-    <label for="text">Texte à encoder :</label>
-    <input id="text" type="text" value="" placeholder="votre adresse ex: http://top5.re" oninput="modifTexteAencoder();"/><br/>
+    <label for="text">Adresse à encoder :</label>
+    <input id="text" type="text" value="" placeholder="votre adresse ex: https://top5.re"
+           oninput="modifTexteAencoder();"/><br/>
 
-
-    <button id="btnUrlTest" onclick="window.open(document.getElementById('text').value, '_blank');">Tester l'adresse</button>
+    <button id="btnUrlTest" onclick="window.open(document.getElementById('text').value, '_blank');">Tester l'adresse
+    </button>
     <div id="qrcode"></div>
     <div id="bouton">
         <button onclick="makeCode();" id="boutonQrcode">Créer le code !</button>
